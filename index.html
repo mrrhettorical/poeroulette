@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+TODO: chosen-select for multi-select
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>PoE Build Roulette</title>
+		
+		<link rel="stylesheet" type="text/css" href=".assets/bootstrap-5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href=".assets/css/style.css">
+		
+		<script type="application/javascript" src=".assets/js/jquery-3.6.0.min.js"></script>
+		<script type="application/javascript" src=".assets/bootstrap-5.0/js/bootstrap.min.js"></script>
+		<script type="application/javascript" src=".assets/bootstrap-5.0/js/bootstrap.bundle.min.js"></script>
+		<script type="application/javascript" src=".assets/js/roulette.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid background-container">
+			<div class="row">
+				<div class="col">
+					<h1>Path of Exile Build Roulette</h1>
+				</div>
+			</div>
+			<div class="row">
+				<p>
+				This will roll a number of Keystones, skills, and Ascendancies, and you get to decide how you want to build from that.
+				Will you roll four Keystones and pick two? Roll three and try to build around all of them? Pull one Ascendancy and force
+				yourself to work with something you've never tried before? You decide!
+				</p>
+				<p>
+				Note: This information is accurate as of February 6, 2025, and the current league is 3.25 - Settlers of Kalguur.
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="row">
+							<!-- There are 45 Keystones, not including Worship the Blightheart (which is annoint-only) -->
+							<h5><label for="numKeystones">Keystones to roll: <span id="lblNumKeystones"></span></label></h5>
+							<input type="range" min="1" max="10" class="slider" id="numKeystones" value="3">
+						</div>
+						<div class="row">
+							<label for="bannedKeystones">Banned Keystones</label>
+							<select id="bannedKeystones" multiple>
+								<option value="Acrobatics">Acrobatics</option>
+							</select>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="row">
+							<h5><label for="numSkills">Skills to roll: <span id="lblNumSkills"></span></label></h5>
+							<input type="range" min="1" max="16" class="slider" id="numSkills">
+						</div>
+						<div class="row">
+							<input type="checkbox" id="allowTGem"><label for="allowTGem">Include Transfigured?</label>
+						</div>
+						<div class="row">
+							<input type="checkbox" id="allowVGem"><label for="allowVGem">Include Vaal?</label>
+						</div>
+						<div class="row">
+							<label for="bannedSkills">Banned skills</label>
+							<select id="bannedSkills" multiple>
+								<option value="Frostblink">Frostblink</option>
+								<option value="Flame Dash">Flame Dash</option>
+								<option value="Spectral Throw">Spectral Throw</option>
+							</select>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="row">
+							<!-- There are 19 Ascendancies -->
+							<h5><label for="numAscendancies">Ascendancies to roll: <span id="lblNumAscendancies"></span></label></h5>
+							<input type="range" min="1" max="10" class="slider" id="numAscendancies" value="2">
+						</div>
+						<div class="row">
+							<label for="bannedAscendancies">Banned Ascendancies</label>
+							<select id="bannedAscendancies" multiple>
+								<option value="Ascendant">Ascendant</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="test"></div>
+		</div>
+	</body>
+</html>
